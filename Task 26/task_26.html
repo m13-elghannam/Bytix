@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 26</title>
+    <link rel="stylesheet" href="task_26.css">
+    <script src="task_26.js" defer></script>
+</head>
+<body>
+    <button state="closed" id="menu_button" onclick="openMenu()">
+        <div id="button_before"></div>
+        <div id="button_after"></div>
+        <span>Open Tasks</span>
+    </button>
+    <nav>
+        <button class="tasks_buttons" 
+        ondblclick ="document.querySelector('#bgColor_byButtons').style.display = 'flex' ">
+            task 1
+        </button>
+        <button class="tasks_buttons"
+        ondblclick ="document.querySelector('#bgColor_byColorSquare').style.display = 'flex';">
+            task 2
+        </button>
+        <button class="tasks_buttons"
+        ondblclick="document.getElementById('live_text').style.display = 'flex'">
+            task 3
+        </button>
+        <button class="tasks_buttons"
+        ondblclick="document.getElementById('hide&seek').style.display = 'flex'">
+            task 4
+        </button>
+        <button class="tasks_buttons"
+        ondblclick="document.getElementById('rotating_div').style.display = 'flex'">
+            task 5
+        </button>
+        <button class="tasks_buttons"
+        ondblclick="document.getElementById('rounding_div').style.display = 'flex'">
+            task 6
+        </button>
+    </nav>
+
+    <main id="bgColor_byButtons" style="flex-direction: row;">
+        <button class="bgColor_buttons" style="background-color: red;" 
+        onclick="body.style.backgroundColor = 'red'" 
+        ondblclick="body.style.backgroundColor = '#eee'">
+        </button>
+
+        <button class="bgColor_buttons" style="background-color: blue;" 
+        onclick="body.style.backgroundColor = 'blue'" 
+        ondblclick="body.style.backgroundColor = '#eee'">
+        </button>
+
+        <button class="bgColor_buttons" style="background-color: green;" 
+        onclick="body.style.backgroundColor = 'green'" 
+        ondblclick="body.style.backgroundColor = '#eee'">
+        </button>
+
+    </main>
+
+    <main id="bgColor_byColorSquare" style="flex-direction: column;">
+        <label id="color_square">
+        <input type="color" id="color_input" style="visibility: hidden;" 
+        oninput = "document.body.style.backgroundColor = document.getElementById('color_input').value">
+        </label>
+        <button id="reset_button" ondblclick="document.body.style.backgroundColor = '#eee'">
+            Reset
+        </button>
+    </main>
+
+    <main id="live_text" style="flex-direction: column;">
+        <h1>Type here</h1>
+        <input type="text" id="text_input" 
+        oninput="document.querySelector('#live_text > h1').innerText = document.getElementById('text_input').value">
+    </main>
+
+    <main id="hide&seek" style="flex-direction: column;">
+        <button id="show_button" state="hidden" onclick="BikaBoo()">
+            show
+        </button>
+        <h1 id="Bika_Boo">Bika Boo</h1>
+    </main>
+
+    <main id="rotating_div" style="flex-direction: column;">
+        <div id="rotate_me" style="margin: 13px;">Rotate me</div>
+        <input type="number" id="rotating_value" 
+        oninput="document.querySelector('#rotate_me').style.transform =
+        'rotate(' + document.querySelector('#rotating_value').value + 'deg)'">
+    </main>
+
+    <main id="rounding_div" style="flex-direction: column;">
+        <div id="round_me">Round me</div>
+        <input type="range" id="rounding_value" 
+        oninput="document.querySelector('#round_me').style.borderRadius = '' + document.querySelector('#rounding_value').value + 'px'">
+    </main>
+
+</body>
+</html>

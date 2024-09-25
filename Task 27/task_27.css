@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#heading {
+    width: 100%;
+    height: 50px;
+    background-color: red;
+    color: white;
+    font-family: sans-serif;
+    font-size: 35px;
+    padding: 5px;
+}
+
+#adding_post {
+    width: 500px;
+    height: 230px;
+    border-radius: 10px;
+    border: 4px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#adding_post > h2 {
+    font-family: sans-serif;
+    width: 100%;
+    background-color: red;
+    color: white;
+    padding: 5px
+}
+    
+#username {
+    width: 450px;
+    height: 30px;
+    border: 3px red solid;
+    border-radius: 15px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#username::placeholder {
+    font-family: sans-serif;
+    color: red;
+    font-weight: bold;
+}
+
+#username:focus {
+    outline: none;
+    color: red;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+#userpost {
+    width: 450px;
+    height: 75px;
+    border: 3px red solid;
+    border-radius: 15px;
+    padding: 7.5px;
+    cursor: pointer;
+    resize: none;
+}
+
+#userpost::placeholder {
+    font-family: sans-serif;
+    color: red;
+    font-weight: bold;
+}
+
+#userpost:focus {
+    outline: none;
+    color: red;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+#post_button {
+    width: 100px;
+    height: 25px;
+    border-radius: 12.5px;
+    background-color: red;
+    color: white;
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+#post_button:hover {
+    background-color: white;
+    color: red;
+    border: 3px solid red;
+}
+
+.post_box {
+    width: 500px;
+    border-radius: 10px;
+    border: 4px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.poster_name {
+    width: 100%;
+    height: 30px;
+    background-color: red;
+    color: white;
+    font-family: sans-serif;
+    font-size: 18px;
+    padding: 6px;
+}
+
+.post {
+    color: red;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 13px;
+}
